@@ -18,35 +18,26 @@ export class Tab1Page {
        // Para adicionar novos filmes, é só copiar com os colchetes o conteúdo entre eles e separa cada filme com uma virgula( , ).
 
         {
-      nome: 'A Guerra do Amanhã (2021)',
-      lancamento: '02/07/2021',
-      duracao: '2h:18m',
+      nome: 'Mortal Kombat (2021)',
+      lancamento: '15/04/2021 ',
+      duracao: '1h 50m',
       classificacao: '91',
-      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bLnJld3yWPB6KGS2uxhmGMhww8x.jpg',
-      generos: ['Ação', 'Ficção científica']
-
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ijvC2w2yANsfgLT3LMu2zFr0fxh.jpg',
+      generos: ['Ação', 'Fantasia', 'Aventura'],
+      pagina: '/mortal-kombate'
     },
 
     {
-      nome: 'Liga da Justiça de Zack Snyder (2021)',
+      nome: 'Liga da Justiça (2021)',
       lancamento: '18/03/2021',
       duracao: '4h 2m',
       classificacao: '76',
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ArWn6gCi61b3b3hclD2L0LOk66k.jpg',
-      generos: ['Ação', 'Aventura', 'Fantasia', 'Ficção científica']
-
-    },
-
-
-    {
-      nome: 'Céu Vermelho-Sangue (2021)',
-      lancamento: '23/07/2021',
-      duracao: '2h 1m',
-      classificacao: '82',
-      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zacyfceQWlgA1PbL7PCs8bRTPsI.jpg',
-      generos: ['Ação', 'Terror']
-
+      generos: ['Ação', 'Aventura', 'Fantasia', 'Ficção científica'],
+      pagina: '/liga-justica'
     }
+
+
 
 
 
