@@ -1,8 +1,9 @@
+import { GeneroService } from './../services/genero.service';
 import { IListaFilmes, IFilmeApi } from './../models/IFilmeAPI.model';
 import { FilmeService } from './../services/filme.service';
 import { DadosService } from './../services/dados.service';
 import { IFilme } from './../models/IFilme.model';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
 
    titulo = 'Filmes';
 
@@ -45,12 +46,15 @@ export class Tab1Page {
 
   listaFilmes: IListaFilmes;
 
+  generos: string[] = [];
+
 
   constructor(
     public alertController: AlertController,
     public toastController: ToastController,
     public dadosService: DadosService,
     public filmeService: FilmeService,
+    public generoService: GeneroService,
     public route: Router) {  }
 
     buscarFilmes(evento: any){
@@ -106,6 +110,19 @@ export class Tab1Page {
       color: 'success'
     });
     toast.present();
+  }
+
+  ngOnInit() {
+     this.generoService.buscarGeneros().subscribe(dados =>{
+        console.log('Generos: ', dados.genres);
+        dados.genres.forEach(genero => {
+         this.generos[genero.id] = genero.name;
+
+
+        });
+
+      });
+
   }
 
 }
